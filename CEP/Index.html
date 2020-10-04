@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="wrapper_body">
+
+    <div class="header">
+        <div class="wrapper">
+            <p class="teste">Digite o CEP: </p>
+            <input id="consultaCEP" />
+            <Button type="button" onclick="consutaCep()">Consultar</Button>
+        </div>
+        
+    </div>
+
+    <div class="body">
+
+        <h2 id="cep">CEP CONSULTADO: xxxxx-xxx</h2>
+
+        <table class="lista">
+            <tr>
+                <td>Logradouro</td>
+                <td id="logradouro" > Rua Exemplo</td>
+            </tr>
+
+            <tr>
+                <td>Bairro</td>
+                <td id="bairro"> Bairro Exemplo </td>
+            </tr>
+
+            <tr>
+                <td>Cidade</td>
+                <td id="localidade"> Cidade Exemplo </td>
+            </tr>
+
+            <tr>
+                <td>UF</td>
+                <td id="uf"> xx </td>
+            </tr>
+
+            <tr>
+                <td>DDD</td>
+                <td id="ddd"> xx </td>
+            </tr>
+
+        </table>
+
+    </div>
+</div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
