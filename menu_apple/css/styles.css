@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #eee;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    background-color: #cecece;
+
+    width:800px;
+    height: 80px;
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -400px;
+}
+
+
+.icone{
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
