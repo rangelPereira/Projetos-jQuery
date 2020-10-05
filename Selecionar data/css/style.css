@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    outline: 0;    
+    text-decoration: none;
+    color: #333;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ccc;
+    height: 100vh;
+
+}
+.menuArea{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.menuArea p {
+    padding: 10px 0px;
+    font-size: 18px;
+}
+
+.menuArea input{
+    width: 100%;
+    height: 30px;
+
+    padding: 5px 10px;
+}
+
+.horaescolha{
+
+    position: absolute;
+    display: none;
+}
+
+.wrapper{
+    width: 150px;
+    height: 100px;
+    background-color: #eee;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+}
+
+.wrapper button{
+    width: 40%;
+    height: 40%;
+    margin: 2.5%;
+
+}
