@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    outline: 0;
+
+    
+}
+body{
+    background-color: #eee;
+    display: flex;
+    height: 100vh;
+    color: #555;
+
+}
+
+.placar{
+    width: 150px;
+    height: 120px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #ccc;
+    text-align: center;
+}
+
+.placar button{
+    padding: 5px 10px;
+    border: 0;
+    cursor: pointer;
+}
+
+.placar button:hover{
+    opacity: 0.8;
+}
+
+#placar{
+    font-size: 50px;
+}
+.bola {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+}
