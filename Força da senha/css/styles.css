@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    outline: 0;
+}
+
+body{
+    background-color: #ccc;
+    display: flex;
+    height: 100vh;
+    color: #555;
+
+}
+
+.wrapper_body{
+    margin: auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 10px 10px 5px #848484;
+    border-radius: 10px;
+}
+.wrapper_body p{
+    padding: 10px 0;
+}
+
+.wrapper_body input{
+    height: 30px;
+    width: 100%;
+    border: 1px solid #777;
+    border-radius: 10px;
+
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+#teste{
+    height: 30px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 2px solid #777;
+    overflow: hidden;
+    margin: 10px 0;
+
+}
+.testando{
+    height: 30px;
+    width: 0px;
+
+}
