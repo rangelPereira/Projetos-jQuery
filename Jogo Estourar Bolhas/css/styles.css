@@ -17,22 +17,12 @@ body{
 
 .placar{
     width: 150px;
-    height: 120px;
+    height: 100px;
     position: fixed;
     left: 0;
     top: 0;
     background-color: #ccc;
     text-align: center;
-}
-
-.placar button{
-    padding: 5px 10px;
-    border: 0;
-    cursor: pointer;
-}
-
-.placar button:hover{
-    opacity: 0.8;
 }
 
 #placar{
@@ -43,4 +33,11 @@ body{
     height: 50px;
     border-radius: 50%;
     position: absolute;
+}
+
+#fundoGame{
+    margin: auto;
+    position: relative;
+    width: 600px;
+    height: 600px;
 }

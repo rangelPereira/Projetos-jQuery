@@ -1,36 +1,65 @@
+function start() { // Inicio da função start()
+	$("#inicio").hide();
+
+
+
+//Principais variaveis
+
+var fimdojogo = false;
+var placar = 0;
+
+
+setInterval(addBola, 1000);
+
+
+
+
 function addBola(){
-    var x = Math.floor(Math.random()*800);
-    var y = Math.floor(Math.random()*500);
-    var cor = Math.floor(Math.random()*4);
-
-    var bola = $('<div class="bola"></div>');
-    bola.css('left', x+'px');
-    bola.css('top', y+'px');
+    if(fimdojogo == false){
 
 
-    switch(cor) {
-        case 0:
-            bola.css('background-color', 'blue');
-            break;
-        case 1:
-            bola.css('background-color', 'red');
-            break;
-        case 2:
-            bola.css('background-color', 'yellow');
-            break;
-        case 3:
-            bola.css('background-color', 'black');
-            break;
+        var x = Math.floor(Math.random()*200);
+        var y = Math.floor(Math.random()*200);
+        var cor = Math.floor(Math.random()*4);
+
+
+
+        var bola = $('<div class="bola"></div>');
+        bola.css('left', x+'px');
+        bola.css('top', y+'px');
+
+
+        switch(cor) {
+            case 0:
+                bola.css('background-color', 'blue');
+                break;
+            case 1:
+                bola.css('background-color', 'red');
+                break;
+            case 2:
+                bola.css('background-color', 'yellow');
+                break;
+            case 3:
+                bola.css('background-color', 'black');
+                break;
+        }
+
+        bola.bind('click', function(){
+            $(this).fadeOut('fast');
+            $(this).remove();
+
+            placar++;
+            upadatePlacar();
+        })
+            $('#fundoGame').append(bola);
+
     }
 
-    bola.bind('click', function(){
-        $(this).fadeOut('fast');
-
-        placar++;
-        upadatePlacar();
-    })
+    let quantidade = $('.bola').length;
+    if(quantidade > 9) {
+        gameOver();
+    }
     
-    $(document.body).append(bola);
 }
 
 
@@ -39,11 +68,26 @@ function upadatePlacar(){
     $('#placar').html(placar);
 }
 
-var placar = 0;
 
-$(function(){
-    
-    $('#comecar').bind('click', function(){
-            setInterval(addBola, 1000);
-    });
-});
+
+
+
+            //Função GAME OVER
+            function gameOver() {
+                fimdojogo = true;
+
+                $('.bola').remove();
+
+                $("#fundoGame").append("<div id='fim'></div>");
+
+                $("#fim").html("<h1> Game Over </h1> <div id='reinicia' onClick=reiniciaJogo()><h3>Jogar Novamente</h3></div>");
+                } // Fim da Função gameOver();
+    } // Fim da função start
+
+    function reiniciaJogo() {
+        $("#fim").remove();
+        $('#placar').html('0');
+
+        start();
+        
+} //Fim da função reiniciaJogo
