@@ -4,6 +4,51 @@
     box-sizing: border-box;
     font-family: sans-serif;
     outline: 0;    
-    text-decoration: none;
     color:#fff
+}
+
+.screen{
+    display: flex;
+    height: 100vh;
+}
+
+.leftside{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftside img{
+    max-width: 500px;
+    height: auto;
+}
+
+.rightside{
+    width: 500px;
+    background-color: #000;
+    padding: 50px;
+}
+
+.rightside label{
+    display: block;
+    margin-bottom: 20px;
+}
+
+.rightside input{
+    width: 100%;
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 8px;
+    font-size: 14px;
+    color: #666;
+    font-weight: 600;
+}
+
+.rightside .btn-form{
+    color:#000;
+}
+.rightside .btn-form:hover{
+    opacity: 0.9;
+    cursor: pointer;
 }
