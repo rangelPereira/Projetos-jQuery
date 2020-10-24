@@ -1,9 +1,9 @@
 $(".btn-form").click(function(event){
     event.preventDefault();
     let send = true;
-    let form = document.querySelector('.validator');
+    let form = $('.validator');
 
-    let inputs = form.querySelectorAll('input');
+    let inputs = $('form input');
 
     clearErros();
 
@@ -39,7 +39,21 @@ checkInput = (input) => {
                     if(input.value == ''){
                         return 'Campo não pode ser vazio.';
                     }
-                    break;
+                break;
+                case 'min':
+                    if(input.value.length < rDetails[1]){
+                        return 'Campo tem que ter pelo menos '+rDetails[1]+' caracteres';
+                    } 
+                break;
+                case 'email':
+                    if(input.value != ''){
+                        let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+                        if(!regex.test(input.value.toLowerCase())){
+                            return 'Digite um e-mail valido!';
+                        }
+                    } 
+                break;
             }
         }
     }
@@ -54,5 +68,7 @@ showError = (input, error) => {
 
 clearErros = () => {
     $(".erro").remove();
+    $('input').css('borderColor', '#999');
+
 }
 
