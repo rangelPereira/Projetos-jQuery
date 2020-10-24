@@ -5,6 +5,8 @@ $(".btn-form").click(function(event){
 
     let inputs = form.querySelectorAll('input');
 
+    clearErros();
+
     for(let i = 0; i<inputs.length;i++){
         let input = inputs[i];
         let check = checkInput(input);
@@ -48,5 +50,9 @@ checkInput = (input) => {
 showError = (input, error) => {
     var element1 = $("<p class='erro'></p>").text(error);
     $(input).after(element1).css('borderColor', '#ff0000');
+}
+
+clearErros = () => {
+    $(".erro").remove();
 }
 
