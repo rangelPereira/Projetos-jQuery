@@ -3,18 +3,45 @@ $(".btn-form").click(function(event){
     let send = true;
     let form = document.querySelector('.validator');
 
+    let inputs = form.querySelectorAll('input');
 
-    let input = form.querySelectorAll('input');
+    for(let i = 0; i<inputs.length;i++){
+        let input = inputs[i];
+        let check = checkInput(input);
 
-    for(let i = 0; i<input.length;i++){
-        let input = input[i];
-        console.log(input);
+        if(check !== true){
+            send = false;
+            // tratar o erro
+            console.log(check);
+
+
+        }
     }
 
-    send = false;
     if(send){
         form.submit();
     }
 
 });
+
+
+checkInput = (input) => {
+    let rules = input.getAttribute('data-rules');
+    if(rules !== null){
+        rules = rules.split('|');
+
+        for(let k in rules) {
+            let rDetails = rules[k].split('=');
+            switch(rDetails[0]){
+                case 'required':
+                    if(input.value == ''){
+                        return 'Campo não pode ser vazio.';
+                    }
+                    break;
+            }
+        }
+    }
+
+    return true;
+}
 
