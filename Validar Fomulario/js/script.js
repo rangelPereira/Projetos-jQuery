@@ -12,7 +12,7 @@ $(".btn-form").click(function(event){
         if(check !== true){
             send = false;
             // tratar o erro
-            console.log(check);
+            showError(input, check);
 
 
         }
@@ -43,5 +43,10 @@ checkInput = (input) => {
     }
 
     return true;
+}
+
+showError = (input, error) => {
+    var element1 = $("<p class='erro'></p>").text(error);
+    $(input).after(element1).css('borderColor', '#ff0000');
 }
 

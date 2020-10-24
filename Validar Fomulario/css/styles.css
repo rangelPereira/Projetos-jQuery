@@ -52,3 +52,8 @@
     opacity: 0.9;
     cursor: pointer;
 }
+.erro{
+    background-color: brown;
+    padding: 5px;
+    width: 100%;
+}
